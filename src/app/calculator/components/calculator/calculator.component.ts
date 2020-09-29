@@ -92,7 +92,7 @@ export class CalculatorComponent implements OnInit {
   }
 
   clear(): void {
-    if (this.result !== '0') {
+    if (this.expression !== '0') {
       this.expression = this.result = '0';
     } else {
       this.previousExpression = '';

@@ -1,0 +1,65 @@
+@import 'src/variables.scss';
+
+
+:host {
+  display: block;
+  width: 18rem;
+  box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+}
+
+.displays {
+  display: flex;
+  padding: 1rem;
+  flex-direction: column;
+  background: linear-gradient($dark-green-color, $light-green-color);
+
+  & > * {
+    padding: 1rem;
+  }
+}
+
+.buttons {
+  display: grid;
+  height: 22rem;
+  padding-top: 1rem;
+  grid-template-columns: repeat(3, 1fr) .7fr;
+  grid-template-rows: .7fr repeat(4, 1fr);
+  grid-template-areas: 
+    "top top top top"
+    "keys keys keys right"
+    "keys keys keys right"
+    "keys keys keys right"
+    "keys keys keys right";
+  background-color: $black-color;
+
+  &__actions-top {
+    grid-area: top;
+    display: grid;
+    height: 100%;
+    grid-template-columns: repeat(3, 1fr) .7fr;
+
+    & > * {
+      justify-self: center;
+    }
+  }
+  
+  &__actions-right {
+    grid-area: right;
+    display: grid;
+    grid-template-rows: auto;
+
+    & > * {
+      justify-self: center;
+    }
+  }
+  
+  &__keys {
+    grid-area: keys;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    & > * {
+      justify-self: center;
+    }
+  }
+}

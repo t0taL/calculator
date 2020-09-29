@@ -1,0 +1,22 @@
+@import 'src/variables.scss';
+
+
+:host {
+  height: 100%;
+  width: 100%;
+}
+
+button {
+  height: inherit;
+  width: inherit;
+  border: none;
+  font-size: 2rem;
+  color: $light-green-color;
+  background-color: unset;
+  cursor: pointer;
+
+  &:focus,
+  &:active {
+    outline: none;
+  }
+}

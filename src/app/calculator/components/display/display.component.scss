@@ -1,0 +1,23 @@
+@import 'src/variables';
+
+
+:host {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  overflow: hidden;
+}
+
+span {
+  color: $white-color;
+
+  &.small {
+    min-height: 1.5rem;
+    font-size: 1rem;
+  }
+
+  &.big {
+    height: 2.5rem;
+    font-size: 2rem;
+  }
+}

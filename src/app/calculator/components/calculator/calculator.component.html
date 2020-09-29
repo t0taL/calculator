@@ -1,0 +1,29 @@
+<section class="displays">
+  <app-display size="small">{{ previousExpression }}</app-display>
+
+  <app-display size="big">{{ expression }}</app-display>
+</section>
+
+<section class="buttons">
+  <section class="buttons__actions-top">
+    <app-button (clickEvent)="clear()">C</app-button>
+  
+    <app-button *ngFor="let action of (actions | slice:0:3)" (clickEvent)="enterAction(action)">
+      {{ action }}
+    </app-button>
+  </section>
+  
+  <section class="buttons__keys">
+    <app-button *ngFor="let key of keys" (clickEvent)="enterKey(key)">
+      {{ key }}
+    </app-button>
+  
+    <app-button (clickEvent)="getResult()">=</app-button>
+  </section>
+  
+  <section class="buttons__actions-right">
+    <app-button *ngFor="let action of (actions | slice:3)" (clickEvent)="enterAction(action)">
+      {{ action }}
+    </app-button>
+  </section>
+</section>
